@@ -1,5 +1,5 @@
 <template>
-    <ThemeToggleComponent />
+    <ThemeToggleComponent/>
 
     <ShareComponent />
     <!-- <HeaderComponent /> -->
@@ -17,46 +17,68 @@ import ThemeToggleComponent from './components/ThemeToggleComponent.vue';
 export default {
     name: 'App',
     components: {
-        SocialMediaLinks,
-        ShareComponent,
-        ThemeToggleComponent
-    }
+    SocialMediaLinks,
+    ShareComponent,
+    ThemeToggleComponent
+},
+  
 };
 </script>
 
 <style>
-#app {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    background-color: #f1f1f1;
-    margin-top: 60px;
+:root {
+  --primary-color: #1c41ab;
+  --secondary-color: #305dfc;
+  --accent-color: #f7f7f7;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+
+  /* #2c3e50 */
 }
 
-html {
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+
+
+#app {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--font-color);
+    background-color: var(--bg-color);
+    margin-top: 60px;
+  }
+
+  html {
     height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f1f1f1;
-    color: #2c3e50;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 a {
-    color: #2c3e50;
+    color: var(--font-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.dark {
-    background-color: #2c3e50;
-    color: #f1f1f1;
-}
-
 fa-icon {
-    color: #2c3e50;
+    color: var(--font-color);
 }
 </style>
