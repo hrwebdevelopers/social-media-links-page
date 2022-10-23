@@ -5,7 +5,7 @@
         </a>
     </div>
 
-    <div class="dialog-container" v-if="show">
+    <div v-if="show" class="dialog-container">
         <div class="dialog">
             <div class="dialog-header">
                 <h4>Share this</h4>
@@ -72,11 +72,26 @@
 <script>
 export default {
     name: 'ShareComponent',
+    data() {
+        return {
+            show: false,
+            copyTxt: 'Copy',
+            fbShare: 'https://www.facebook.com/sharer/sharer.php?u=https://www.hr-webdev.com',
+            twShare: 'https://twitter.com/intent/tweet?text=Check%20out%20this%20Link%20-%20https://www.hr-webdev.com',
+            inShare: 'https://www.linkedin.com/sharing/share-offsite/?url=https://www.hr-webdev.com',
+            igShare: 'https://www.instagram.com/direct/new',
+            waShare: 'https://web.whatsapp.com/send?text=Check+out+this+Link%21+-+https://www.hr-webdev.com',
+            msnShare: 'https://www.messenger.com/new',
+            emShare: 'mailto:?subject=Hey%20check%20this%20out&body=https://www.hr-webdev.com',
+            copyShare: 'https://hr-webdev.com/channels'
+        };
+    },
     methods: {
         onCopy() {
             const copyTextEl = document.getElementById('copyTextEl');
             const range = document.createRange();
             const defaultLink = copyTextEl.textContent;
+
             // Add secure link
             copyTextEl.textContent = `https://${defaultLink}`;
             range.selectNode(copyTextEl);
@@ -92,20 +107,6 @@ export default {
                 this.copyTxt = 'Copy';
             }, 3000);
         }
-    },
-    data() {
-        return {
-            show: false,
-            copyTxt: 'Copy',
-            fbShare: 'https://www.facebook.com/sharer/sharer.php?u=https://www.hr-webdev.com',
-            twShare: 'https://twitter.com/intent/tweet?text=Check%20out%20this%20Link%20-%20https://www.hr-webdev.com',
-            inShare: 'https://www.linkedin.com/sharing/share-offsite/?url=https://www.hr-webdev.com',
-            igShare: 'https://www.instagram.com/direct/new',
-            waShare: 'https://web.whatsapp.com/send?text=Check+out+this+Link%21+-+https://www.hr-webdev.com',
-            msnShare: 'https://www.messenger.com/new',
-            emShare: 'mailto:?subject=Hey%20check%20this%20out&body=https://www.hr-webdev.com',
-            copyShare: 'https://hr-webdev.com/channels'
-        };
     }
 };
 </script>

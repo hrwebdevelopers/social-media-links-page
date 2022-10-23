@@ -5,8 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:app": "pnpm run build:check && pnpm run build",
+    "build:check": "pnpm run lint && pnpm run format:check",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write \"**/*.{js,vue,d.ts}\""
+    "format": "prettier --write \"**/*.{js,vue,d.ts}\"",
+    "format:check": "prettier --check \"**/*.{js,vue,d.ts}\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -22,6 +25,7 @@
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-service": "~5.0.8",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",

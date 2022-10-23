@@ -13,16 +13,17 @@ import { ref } from 'vue';
 
 export default {
     name: 'LinkComponent',
+    setup() {
+        const hovering = ref(false);
+
+        return {
+            hovering
+        };
+    },
     props: {
         image: String,
         title: String,
         url: String
-    },
-    setup() {
-        const hovering = ref(false);
-        return {
-            hovering
-        };
     },
     methods: {
         shareDialog() {
