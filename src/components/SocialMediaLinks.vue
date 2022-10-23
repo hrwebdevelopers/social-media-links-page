@@ -31,21 +31,33 @@
       </div>
     </div>
     <h3 class="subtitle">Learn More</h3>
-
+    <div class="link-container">
+      <LinkComponent image="/logo.png" title="New Idea or Project? 💡" url="https://www.hr-webdev.com" />
+      <LinkComponent image="/favicon.ico" title="Othe Website" url="https://www.hr-webdev.com" />
+    </div>
+    <h3 class="subtitle">Community Projects</h3>
+    <div class="link-container">
+      <LinkComponent image="/qr-code.png" title="QR Code Generator"
+        url="https://hectorromerodev.github.io/qr-code-generator/" />
+      <LinkComponent image="/excel-to-json.png" title="Excel to JSON"
+        url="https://hectorromerodev.github.io/excel-to-json-v2/" />
+    </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'SocialMediaLinks',
-    components: {
+import LinkComponent from './LinkComponent.vue'
 
-    },
+export default {
+  name: 'SocialMediaLinks',
     props: {
       title: String,
       description: String
-    },
+  },
+  components: {
+    LinkComponent
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -61,21 +73,12 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #f1f1f1;
-  font-size: 2em;
-}
-
-
-
-.container{
+.container {
   display: flex;
   flex-direction: column;
-  /* height: 100vh – 40px – 30px; */
-
 }
 
-.social-link-container{
+.social-link-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,13 +88,18 @@ a {
   width: 100%;
 }
 
-
-.social-link{
-  /* padding: .5rem; */
+.social-link {
+  font-size: 2em;
 }
 
-.social-link:hover{
+.social-link:hover {
   transform: scale(1.1);
 }
 
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 </style>
