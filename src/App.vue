@@ -1,28 +1,27 @@
 <template>
-  <ThemeToggleComponent />
+    <ThemeToggleComponent />
 
-  <ShareComponent />
-  <!-- <HeaderComponent /> -->
-  <img alt="App logo" src="/logo.png" height="60" />
-  <!-- <ProfilePage /> -->
-  <SocialMediaLinks title="@hrwebdevelopers" description="We build blazing-fast, beautiful websites for startups, small businesses and enterprises."/>
-  <!-- <FooterComponent /> -->
-
+    <ShareComponent />
+    <!-- <HeaderComponent /> -->
+    <img alt="App logo" src="/logo.png" height="60" />
+    <!-- <ProfilePage /> -->
+    <SocialMediaLinks title="@hrwebdevelopers" description="We build blazing-fast, beautiful websites for startups, small businesses and enterprises." />
+    <!-- <FooterComponent /> -->
 </template>
 
 <script>
-  import SocialMediaLinks from './components/SocialMediaLinks.vue';
-  import ShareComponent from './components/ShareComponent.vue';
-  import ThemeToggleComponent from './components/ThemeToggleComponent.vue';
+import SocialMediaLinks from './components/SocialMediaLinks.vue';
+import ShareComponent from './components/ShareComponent.vue';
+import ThemeToggleComponent from './components/ThemeToggleComponent.vue';
 
-  export default {
+export default {
     name: 'App',
     components: {
-      SocialMediaLinks,
-      ShareComponent,
-      ThemeToggleComponent
+        SocialMediaLinks,
+        ShareComponent,
+        ThemeToggleComponent
     }
-  }
+};
 </script>
 
 <style>
@@ -34,30 +33,30 @@
     color: #2c3e50;
     background-color: #f1f1f1;
     margin-top: 60px;
-  }
+}
 
 html {
-  height: 100vh;
+    height: 100vh;
     width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f1f1f1;
-      color: #2c3e50;
-    }
-    
-    a {
-      color: #2c3e50;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    
-    .dark {
-      background-color: #2c3e50;
-      color: #f1f1f1;
-    }
-    
-    fa-icon {
-      color: #2c3e50
-  }
+    color: #2c3e50;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dark {
+    background-color: #2c3e50;
+    color: #f1f1f1;
+}
+
+fa-icon {
+    color: #2c3e50;
+}
 </style>
