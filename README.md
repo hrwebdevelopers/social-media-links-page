@@ -1,4 +1,5 @@
 # social-media-links-page
+A simple page with links to my social media accounts.
 
 ## Project setup
 ```
