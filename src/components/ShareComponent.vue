@@ -115,21 +115,22 @@ export default {
 .float-container {
     position: fixed;
     top: 2rem;
-    right: calc(100vw - 80% - 20px);
+    right: calc(100vw - 90% - 1rem);
     z-index: 99;
 }
 
 .share-btn {
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
-    border-radius: 50px;
-    border: solid 1px #2c3e50;
-    cursor: pointer;
+    border-radius: 50%;
+    background: var(--bg-color);
+    box-shadow: 3px 3px 7px var(--box-shadow-top-color),
+        -3px -3px 7px var(--box-shadow-bottom-color);
 }
 
 .share-btn:hover {
-    background-color: #2c3e50;
-    color: #f1f1f1;
+    background-color: var(--bg-color);
+    color: var(--font-color);
     transition: all 0.3s ease-in-out;
 }
 
