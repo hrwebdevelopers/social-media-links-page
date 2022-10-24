@@ -1,12 +1,4 @@
 <template>
-  <!-- <div class="theme-switch-wrapper">
-    <div class="theme-switch" @click="toggleTheme">
-      <input type="checkbox" id="checkbox" />
-      <label for="checkbox"></label>
-    </div>
-    <em>{{ theme }}</em>
-  </div> -->
-
   <div class="theme-switch-wrapper">
     <label class="theme-switch" for="checkbox">
       <input type="checkbox" id="checkbox" @change="switchTheme($event)" />
@@ -14,7 +6,6 @@
     </label>
     <em>{{ theme }}</em>
   </div>
-
 </template>
 
 <script>
@@ -22,23 +13,26 @@ export default {
   name: 'ThemeToggleComponent',
   data() {
     return {
-      theme: localStorage.getItem('theme') || 'light',
+      theme: localStorage.getItem('theme') === 'dark' ? 'dark' : 'light',
     };
   },
   methods: {
     switchTheme(e) {
-      console.log('AQUI');
-      // const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-      if (e.target.checked) {
+      const toggleInput = document.getElementById('checkbox');
+      const isDark = e?.target.checked || toggleInput?.checked;
+      if (isDark) {
         this.theme = 'dark';
-        document.documentElement.setAttribute('data-theme', this.theme);
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
       }
       else {
         this.theme = 'light';
         document.documentElement.setAttribute('data-theme', this.theme);
       }
-      localStorage.setItem('theme', this.theme);
     }
+  },
+  async created() {
+    this.switchTheme();
   }
 };
 </script>
@@ -47,18 +41,25 @@ export default {
 /* BACKGROUND */
 
 .theme-switch-wrapper {
-  display: flex;
+  position: fixed ;
   align-items: center;
+  top: 1.5rem;
+  height: 2rem;
+  right: calc(100vw - 10% - 2rem);
 }
 
 .theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
+  /* margin-left: 10px; */
+  position: absolute;
+  top: -1.125rem;
+  left: 1rem;
+  /* font-size: 1rem; */
 }
 
 .theme-switch {
   display: inline-block;
-  height: 34px;
+  /* height: 34px; */
+  height: 2rem;
   position: relative;
   width: 60px;
 }
@@ -68,7 +69,7 @@ export default {
 }
 
 .slider {
-  background-color: #ccc;
+  background-color: var(--bg-color);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -79,7 +80,7 @@ export default {
 }
 
 .slider:before {
-  background-color: #fff;
+  background-color: var(--font-color);
   bottom: 4px;
   content: "";
   height: 26px;
@@ -90,7 +91,7 @@ export default {
 }
 
 input:checked+.slider {
-  background-color: #66bb6a;
+  background-color: var(--bg-color)
 }
 
 input:checked+.slider:before {
@@ -98,7 +99,14 @@ input:checked+.slider:before {
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 50px;
+  background: var(--bg-color);
+  box-shadow: 3px 3px 7px var(--box-shadow-top-color),
+      -3px -3px 7px var(--box-shadow-bottom-color);
+}
+
+.slider.round:hover {
+  background: var(--bg-color);
 }
 
 .slider.round:before {
