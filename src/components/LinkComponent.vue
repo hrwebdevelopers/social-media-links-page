@@ -1,11 +1,9 @@
 <template>
-    <div class="card-link hover-paint" @mouseover="hovering = true" @mouseout="hovering = false">
+    <a class="card-link hover-paint" @mouseover="hovering = true" @mouseout="hovering = false" 
+      :href="url" target="_blank" rel="noopener noreferrer">
         <img class="link-img" width="20" height="20" :src="image" />
         <p class="link-title">{{ title }}</p>
-        <div class="link-share">
-            <fa-icon @click="shareDialog()" :class="hovering ? 'showBtn' : 'hideBtn'" class="copy-icon" icon="fa-solid fa-share" />
-        </div>
-    </div>
+    </a>
 </template>
 
 <script>
@@ -50,10 +48,11 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-width: 50%;
+    min-width: 30%;
     margin: 0.5rem;
     padding: 0 1rem;
     cursor: pointer;
+    position: relative;
 }
 
 .link-img {
@@ -66,10 +65,17 @@ export default {
     padding: 0;
 }
 
-.link-share:hover {
-    transform: scale(1.2);
-    animation-duration: 1s;
-    animation-name: struggling;
+.link-share {
+    position: relative;  
+}
+
+.link-share-icon {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    color: var(--complement-color);
+    font-size: 1rem;
+    cursor: alias;
 }
 
 @keyframes struggling {
@@ -106,7 +112,7 @@ export default {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    box-shadow: 6px 6px 12px var(--box-shadow-top-color), -6px -6px 12px var(--box-shadow-bottom-color);
 }
 
 .hover-paint:hover {
@@ -123,7 +129,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, #305dfc 0%, #f29d7a 100%);
+    background-image: linear-gradient(to right, var(--secondary-color) 0%, var(--complement-color) 100%);
     transition: 0.5s ease;
     display: block;
     z-index: -1;
@@ -131,5 +137,11 @@ export default {
 
 .hover-paint:hover::before {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card-link {
+        min-width: 80%;
+    }
 }
 </style>

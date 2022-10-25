@@ -1,5 +1,5 @@
 <template>
-    <ThemeToggleComponent />
+    <ThemeToggleComponent/>
 
     <ShareComponent />
     <!-- <HeaderComponent /> -->
@@ -17,22 +17,27 @@ import ThemeToggleComponent from './components/ThemeToggleComponent.vue';
 export default {
     name: 'App',
     components: {
-        SocialMediaLinks,
-        ShareComponent,
-        ThemeToggleComponent
-    }
+    SocialMediaLinks,
+    ShareComponent,
+    ThemeToggleComponent
+},
+  
 };
 </script>
 
 <style>
+@import '../public/css/colors.css ';
+
+
+
 #app {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    background-color: #f1f1f1;
-    margin-top: 60px;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  margin-top: 60px;
 }
 
 html {
@@ -41,22 +46,22 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f1f1f1;
-    color: #2c3e50;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 a {
-    color: #2c3e50;
+    color: var(--font-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.dark {
-    background-color: #2c3e50;
-    color: #f1f1f1;
-}
-
 fa-icon {
-    color: #2c3e50;
+    color: var(--font-color);
 }
 </style>

@@ -1,0 +1,21 @@
+:root {
+  /* LIGHT COLORS */
+  --primary-color: #1c41ab;
+  --secondary-color: #305dfc;
+  --accent-color: #f7f7f7;
+  --complement-color: #f29d7a;
+  --font-color: #2c3e50;
+  --bg-color: #f7f7f7;
+  --box-shadow-top-color: #d2d2d2;
+  --box-shadow-bottom-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #305dfc;
+  --secondary-color: #1c41ab;
+  --accent-color: #f7f7f7;
+  --font-color: #f29d7a;
+  --bg-color: #2c3e50;
+  --box-shadow-top-color: #253544;
+  --box-shadow-bottom-color: #33475c;
+}
