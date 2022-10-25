@@ -14,9 +14,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This project is a simple landing page with links to your social media accounts and your favorite channels. It is a great way to share your social media links with your friends and followers.
+This is a simple project that I made to practice my HTML and CSS skills. I wanted to make a simple page that would show my social media links and a little bit about me. I also wanted to make it responsive so that it would look good on mobile devices.
+
+<img src="preview.gif" alt="product-screenshot" title="Social Media Links Show case" height="400"/>
+
+Also this project it is a great way to share your social media links with your friends and followers with a single link.
 
 ### Built With
 
@@ -100,3 +103,4 @@ Project Link: [https://github.com/hrwebdevelopers/social-media-links-page](https
 [stars-url]: https://github.com/hrwebdevelopers/social-media-links-page/stargazers
 [issues-shield]: https://img.shields.io/github/issues/hrwebdevelopers/social-media-links-page.svg?style=flat-square
 [issues-url]: https://github.com/hrwebdevelopers/social-media-links-page/issues
+[product-screenshot]: preview.gif
