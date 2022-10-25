@@ -58,7 +58,7 @@
 
                 <div class="card-link-copy" @click.prevent="onCopy()">
                     <img width="20" height="20" src="/logo.png" />
-                    <p id="copyTextEl">hr-webdev.com/channels</p>
+                    <p id="copyTextEl">{{ copyShare }}</p>
                     <div>
                         <fa-icon class="copy-icon" icon="fa-solid fa-copy" />
                         {{ copyTxt }}
@@ -83,23 +83,22 @@ export default {
             waShare: 'https://web.whatsapp.com/send?text=Check+out+this+Link%21+-+https://www.hr-webdev.com',
             msnShare: 'https://www.messenger.com/new',
             emShare: 'mailto:?subject=Hey%20check%20this%20out&body=https://www.hr-webdev.com',
-            copyShare: 'https://hr-webdev.com/channels'
+            copyShare: 'channels.hr-webdev.com'
         };
     },
     methods: {
         onCopy() {
             const copyTextEl = document.getElementById('copyTextEl');
             const range = document.createRange();
-            const defaultLink = copyTextEl.textContent;
 
             // Add secure link
-            copyTextEl.textContent = `https://${defaultLink}`;
+            copyTextEl.textContent = `https://${this.copyShare}`;
             range.selectNode(copyTextEl);
             window.getSelection().removeAllRanges();
             window.getSelection().addRange(range);
             document.execCommand('copy');
             // Set back to default link
-            copyTextEl.textContent = defaultLink;
+            copyTextEl.textContent = this.copyShare;
             window.getSelection().removeAllRanges();
 
             this.copyTxt = 'Copied!';
