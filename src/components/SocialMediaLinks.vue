@@ -21,7 +21,7 @@
         <h3 class="subtitle">Learn More</h3>
         <div class="link-container">
             <LinkComponent image="/logo.png" title="New Idea or Project? 💡" url="https://www.hr-webdev.com" />
-            <LinkComponent image="/favicon.ico" title="Othe Website" url="https://www.hr-webdev.com" />
+            <LinkComponent image="/favicon.ico" title="We built with VueJS.org Framework V3" url="https://vuejs.org/" />
         </div>
         <h3 class="subtitle">Community Projects</h3>
         <div class="link-container">
