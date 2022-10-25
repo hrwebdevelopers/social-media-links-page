@@ -151,7 +151,7 @@ export default {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 350px;
-    background-color: #f1f1f1;
+    background-color: var(--bg-color);
     border-radius: 0.5rem;
     padding: 0 1rem 1rem;
     margin: 0;
@@ -159,7 +159,7 @@ export default {
 
 .dialog-header {
     position: relative;
-    color: #2c3e50;
+    color: var(--font-color);
 }
 
 .dialog-body {
@@ -174,9 +174,8 @@ export default {
     position: absolute;
     top: 0;
     right: 0.5rem;
-    color: #2c3e50;
+    color: var(--font-color);
     font-size: 1rem;
-    cursor: pointer;
 }
 
 .close-btn:hover {
@@ -189,7 +188,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
     padding: 0;
 }
 
@@ -200,7 +199,7 @@ export default {
     align-items: center;
     gap: 1rem;
     width: 100%;
-    color: #323232;
+    color: var(--font-color);
     padding: 0 0.5rem;
     margin: 0;
     text-decoration: none;
@@ -208,14 +207,14 @@ export default {
 
 .card-link-copy {
     border-radius: 0.25rem;
-    background: #f1f1f1;
-    box-shadow: 0.25rem 0.25rem 0.5rem #bebebe, -0.25rem -0.25rem 0.5rem #ffffff;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    background: var(--bg-color);
+    box-shadow: 0.25rem 0.25rem 0.5rem var(--box-shadow-top-color), -0.25rem -0.25rem 0.5rem var(--box-shadow-bottom-color);
+    transition: all 0.5s ease-in-out;
+    cursor: copy; 
 }
 
 .card-link-copy:hover {
-    background-color: #e0e0e0;
+    background-color: var(--bg-color);
 }
 
 .fb-icon {
@@ -224,8 +223,8 @@ export default {
 
 .card-link-share:hover {
     border-radius: 0.25rem;
-    background: #e0e0e0;
-    box-shadow: 0.25rem 0.25rem 0.5rem #bebebe, -0.25rem -0.25rem 0.5rem #ffffff;
+    background: var(--bg-color);
+    box-shadow: 0.25rem 0.25rem 0.5rem var(--box-shadow-top-color), -0.25rem -0.25rem 0.5rem var(--box-shadow-bottom-color);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -264,9 +263,5 @@ export default {
 
 .ig-brand {
     background-color: #e1306c;
-}
-
-.copy-icon {
-    color: #636363;
 }
 </style>
