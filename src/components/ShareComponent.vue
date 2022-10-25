@@ -124,8 +124,7 @@ export default {
     font-size: 1rem;
     border-radius: 50%;
     background: var(--bg-color);
-    box-shadow: 3px 3px 7px var(--box-shadow-top-color),
-        -3px -3px 7px var(--box-shadow-bottom-color);
+    box-shadow: 3px 3px 7px var(--box-shadow-top-color), -3px -3px 7px var(--box-shadow-bottom-color);
 }
 
 .share-btn:hover {
@@ -188,7 +187,7 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
     padding: 0;
 }
 
@@ -210,7 +209,7 @@ export default {
     background: var(--bg-color);
     box-shadow: 0.25rem 0.25rem 0.5rem var(--box-shadow-top-color), -0.25rem -0.25rem 0.5rem var(--box-shadow-bottom-color);
     transition: all 0.5s ease-in-out;
-    cursor: copy; 
+    cursor: copy;
 }
 
 .card-link-copy:hover {

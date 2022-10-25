@@ -1,5 +1,5 @@
 <template>
-    <ThemeToggleComponent/>
+    <ThemeToggleComponent />
 
     <ShareComponent />
     <!-- <HeaderComponent /> -->
@@ -17,27 +17,24 @@ import ThemeToggleComponent from './components/ThemeToggleComponent.vue';
 export default {
     name: 'App',
     components: {
-    SocialMediaLinks,
-    ShareComponent,
-    ThemeToggleComponent
-},
-  
+        SocialMediaLinks,
+        ShareComponent,
+        ThemeToggleComponent
+    }
 };
 </script>
 
 <style>
 @import '../public/css/colors.css ';
 
-
-
 #app {
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: var(--font-color);
-  background-color: var(--bg-color);
-  margin-top: 60px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    margin-top: 60px;
 }
 
 html {
@@ -51,8 +48,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
+    background-color: var(--bg-color);
+    color: var(--font-color);
 }
 
 a {
